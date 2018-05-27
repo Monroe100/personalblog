@@ -28,16 +28,6 @@ For Bloggers
 
 Specifications
 -----
-Behaviour |	Input |	Output |
-----       -----     -----
-| Displays some blog posts |	N/A	Blogs with title | author name and content|
-| Display full blog post |	Click on blog post's title |	User is redirected to a page where they can see the entire post|
-| Comment on Blog Post|	Click on Add |comment|User is redirected to a page where they can comment on the blog post|
-| Subscribe user |	Enter Email address and click submit |	User gets subscribed and receives blog posts updates|
-| Blogger logs in|	Enter email address	|Accesses the Blogger's portal|
-| Write a blog post |	Click add blog |	Blogger is redirected to a page where they can write a new blog post |
-| Delete a blog post |	Click Delete Post |	Blogger deletes a post and its comments |
-| Delete a users comment |	Click Delete comment	Deletes specific comment for a user|
 
 
 Setup/Installation Requirements
