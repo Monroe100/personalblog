@@ -1,7 +1,4 @@
 
-from flask import Blueprint
-auth = Blueprint('auth',__name__)
-from . import views, forms
 
 from flask import render_template,redirect,url_for,request,flash
 from . import auth
