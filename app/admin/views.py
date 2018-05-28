@@ -15,17 +15,17 @@ def check_admin():
         abort(403)
 
 
-# @admin.route('/admin/dashboard')
-# @login_required
-# def admin_dashboard():
-#     '''
-#     Prevent users from accessing the admin page
-#     '''
-#     if not current_user.is_admin:
-#         abort(403)
+@admin.route('/admin/dashboard')
+@login_required
+def admin_dashboard():
+    '''
+    Prevent users from accessing the admin page
+    '''
+    if not current_user.is_admin:
+        abort(403)
 
-#     blogs = Blog.get_blog()
-#     return render_template('admin/admin_dashboard.html', title="AdminDashboard",blogs=blogs)
+    blogs = Blog.get_blog()
+    return render_template('admin/admin_dashboard.html', title="AdminDashboard",blogs=blogs)
 
 # # blog views
 # @admin.route('/blogs', methods=['GET','POST'])
