@@ -1,5 +1,5 @@
 
-from app import create_app,db
+from app import db
 from flask_script import Manager,Server
 from app.models import User,Comments,Blog
 from  flask_migrate import Migrate, MigrateCommand
