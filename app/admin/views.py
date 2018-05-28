@@ -27,14 +27,14 @@ def admin_dashboard():
     blogs = Blog.get_blog()
     return render_template('admin/admin_dashboard.html', title="AdminDashboard",blogs=blogs)
 
-# # blog views
-# @admin.route('/blogs', methods=['GET','POST'])
-# @login_required
-# def list_blogs():
-#     '''
-#     List all blogs
-#     '''
-#     check_admin()
+# blog views
+@admin.route('/blogs', methods=['GET','POST'])
+@login_required
+def list_blogs():
+    '''
+    List all blogs
+    '''
+    check_admin()
 
 #     blogs = Blog.query.all()
 
