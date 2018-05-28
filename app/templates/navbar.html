@@ -1,0 +1,30 @@
+<div class="navbar navbar-inverse" role="navigation" id="navigate">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+        <h5 class="text-center"><a class="navbar-brand" href="/">Home</a></h5>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          {% if current_user.is_authenticated %} {% if current_user.is_admin %}
+          <li><a href="{{ url_for('.admin_dashboard') }}">Dashboard</a></li>
+          <li><a href="{{ url_for('admin.list_blogs') }}">Blogs</a></li>
+          {% else %}
+          <li><a href="{{ url_for('.AdminDashboard') }}">Dashboard</a></li>
+          {% endif %}
+          <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+          <li><a><i class="fa fa-user"></i>  Hi, {{ current_user.username }}!</a></li>
+          {% else %}
+          <li><a href="{{url_for('auth.logout')}}">Sign out </a></li>
+          <li><a href="{{url_for('auth.login')}}">Sign in </a></li>
+          {% endif %}
+        </ul>
+      </div>
+  
+    </div>
+  </div>
