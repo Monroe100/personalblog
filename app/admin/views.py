@@ -7,12 +7,12 @@ from .. import db
 from .forms import BlogForm
 
 
-# def check_admin():
-#     '''
-#     Prevent non-admins from accessing the page
-#     '''
-#     if not current_user.is_admin:
-#         abort(403)
+def check_admin():
+    '''
+    Prevent non-admins from accessing the page
+    '''
+    if not current_user.is_admin:
+        abort(403)
 
 
 # @admin.route('/admin/dashboard')
