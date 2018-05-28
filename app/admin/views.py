@@ -96,6 +96,7 @@ def delete_blog(id):
     Route function that deletes a blog post
     '''
     check_admin()
+    
 
     blog = Blog.query.get_or_404(id)
     db.session.delete(blog)
